@@ -18,7 +18,7 @@
 7. 开发流程
 8. 开发工具
 
-###方案
+### 解决方案
 
 [gulp+webpack](https://github.com/havefive/front-end-demo)
 
