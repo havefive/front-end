@@ -20,7 +20,7 @@
 
 ###方案
 
-**gulp+webpack**
+[gulp+webpack](https://github.com/havefive/front-end-demo)
 
 ### 依赖
 1. [nodejs](http://nodejs.org/)
