@@ -26,7 +26,7 @@
 1. [nodejs](http://nodejs.org/)
 2. [gulp](https://github.com/gulpjs/gulp/)
 
-##[开发规范](css.md)
+##[开发规范](https://github.com/havefive/front-end/blob/master/standard.md)
 
 ###项目结构
 ```
@@ -51,7 +51,7 @@
 
 ###开发流程
 
-![Alt text](process.png)
+![Alt text](https://github.com/havefive/front-end/blob/master/pro.png)
 ####理念:
 1. 一个页面 = 一个模板 + 多个组件
 2. 一个组件 = 一份代码 + 一份数据
