@@ -22,6 +22,9 @@
 
 [gulp+webpack](https://github.com/havefive/front-end-demo)
 
+1. Gulp 是一款基于任务的设计模式的自动化工具
+2. webpack是基于模块的构建工具
+
 ### 依赖
 1. [nodejs](http://nodejs.org/)
 2. [gulp](https://github.com/gulpjs/gulp/)
@@ -57,6 +60,18 @@
 2. 一个组件 = 一份代码 + 一份数据
 3. 一个组件开发一次，复用多次
 4. 一个页面使用多个组件拼装后，实时预览、快速发布上线
+
+#### 开发:
+1. 自动刷新 browser-sync
+2. 代码检查 jshit 
+
+#### 测试:
+1. 模块测试
+2. 业务测试
+
+#### 部署:
+1. 全局替换方案
+2. [fis3增量部署方案](http://fis.baidu.com/fis3/docs/beginning/release.html)
 
 ###常用功能
 
