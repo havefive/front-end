@@ -1,14 +1,19 @@
 
+## 规范说明  
+
+此为前端开发团队遵循和约定的代码书写规范，意在提高代码的规范性和可维护性。  
+此规范为参考规范，不全是硬性要求，统一团队编码规范和风格。让所有代码都是有规可循的，并且能够得到沉淀，减少重复劳动。  
+
 ###HTML规范
 1. 参考[AmazeUI](http://amazeui.org/getting-started/html-css-guide)
 2. 常见规则
    
    ####使用UTF-8 编码
    
-```
+ ```
  <meta charset="UTF-8">
  
-```
+ ```
    * 省略外链资源 URL 协议部分
 	
 ```
@@ -26,7 +31,7 @@
 <img src="google.png" alt="Google">
 
 ```   
-   
+* HTML换行缩进：**采用 2 空格**
 
 ###CSS规范
 
@@ -41,7 +46,24 @@
  * 对与同级元素相比没有特殊的意义的元素使用通用的命名；
 使用功能性或通用的名字可以减少不必要的文件修改。
  * 使用连字符 - 作为 ID、Class 名称界定符
+* CSS嵌套规则  
+  
+```
+    /* 推荐嵌套层级 */
+    .ui-icon-rarr{}
+    .ui-icon-larr{}
+    .ui-title{}
+    .ui-nav .ui-list{}
+    .ui-table .ui-list{}
 
+    /* 不推荐 */
+    .ui-icon-rarr{}
+    .ui-icon-larr{}
+    .ui-title{}
+    .ui-list{}
+    .ui-nav{}
+    
+```
 
 ###JS规范
 ######1. 使用 JSHint 和 JSCS 控制代码质量
