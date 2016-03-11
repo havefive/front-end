@@ -32,6 +32,7 @@
 
 1. 不要使用 @import(替代办法：用postcss处理成一个文件)
 2. 命名规则
+3. 使用 rem 作为字号、长度单位,精准定位的，仍然使用 px
  
 ######ID、Class 使用语义化、通用的命名方式。
  * 只允许使用的小写字母、连字符、数字；
@@ -41,11 +42,10 @@
 使用功能性或通用的名字可以减少不必要的文件修改。
  * 使用连字符 - 作为 ID、Class 名称界定符
 
-3. 使用 rem 作为字号、长度单位
-4. 需要 1px 级别精准定位的，仍然使用 px；
 
 ###JS规范
 ######1. 使用 JSHint 和 JSCS 控制代码质量
+######2. [Nodejs单元测试Mocha](https://segmentfault.com/a/1190000002921481)
 
 ###组件规范
 
@@ -60,9 +60,11 @@
 |-- package.json
 |-- demo        # 实例
 |-- docs        # 文档
-|-- gulpfile.js # 构建配置文件
 |-- css         # css 文件
 |-- js          # JS 文件
 |-- less        # Less 文件
 |-- lib         # 第三方库
 ```
+###### 3. 示例图
+
+![Alt text](https://github.com/havefive/front-end/blob/master/page.png)
