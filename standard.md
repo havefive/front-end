@@ -5,15 +5,12 @@
 此规范为参考规范，不全是硬性要求，统一团队编码规范和风格。让所有代码都是有规可循的，并且能够得到沉淀，减少重复劳动。  
 
 ###HTML规范
-1. 参考[AmazeUI](http://amazeui.org/getting-started/html-css-guide)
-2. 常见规则
+   * 使用UTF-8 编码
    
-   ####使用UTF-8 编码
-   
- ```
+```
  <meta charset="UTF-8">
  
- ```
+```
    * 省略外链资源 URL 协议部分
 	
 ```
@@ -31,7 +28,8 @@
 <img src="google.png" alt="Google">
 
 ```   
-* HTML换行缩进：**采用 2 空格**
+
+   * HTML换行缩进：**采用 2 空格**
 
 ###CSS规范
 
