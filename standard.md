@@ -45,7 +45,7 @@ my-file.min.css
 
 
 ###HTML规范
-  
+
   1.	编码遵循W3C标准,文档类型声明统一为HTML5声明类型，编码统一为UTF-8
   ```
   <!DOCTYPE html>
@@ -70,7 +70,7 @@ my-file.min.css
   ```
   <script src=”jQuery.cookie.js” async></script>
   ```
-  6.	省略<link />与<script>标签的 type 属性。鉴于 HTML5 中以上两者默认的 type 值就是 text/css 和 text/javascript，所以 type 属性一般是可以忽略掉的，在老旧版本的浏览器中这么做也是安全可靠的
+  6.	省略link与<script>标签的 type 属性。鉴于 HTML5 中以上两者默认的 type 值就是 text/css 和 text/javascript，所以 type 属性一般是可以忽略掉的，在老旧版本的浏览器中这么做也是安全可靠的
   ```
   <link rel="stylesheet" href="main.css">
   <script src="main.js"></script>
@@ -118,7 +118,7 @@ my-file.min.css
 1. 不要使用 @import(替代办法：用postcss处理成一个文件)
 2. 命名规则
 3. 使用 rem 作为字号、长度单位,精准定位的，仍然使用 px
- 
+
 ######ID、Class 使用语义化、通用的命名方式。
  * 只允许使用的小写字母、连字符、数字；
  * 应该从 ID 和 Class 的名字上就能看出这元素是干嘛用的（角色、功能、状态），而不是表象（颜色、位置等）或模糊不清的命名；
@@ -127,7 +127,7 @@ my-file.min.css
 使用功能性或通用的名字可以减少不必要的文件修改。
  * 使用连字符 - 作为 ID、Class 名称界定符
 * CSS嵌套规则  
-  
+
 ```
     /* 推荐嵌套层级 */
     .ui-icon-rarr{}
@@ -142,7 +142,7 @@ my-file.min.css
     .ui-title{}
     .ui-list{}
     .ui-nav{}
-    
+
 ```
 
 ###JS规范
@@ -583,5 +583,3 @@ my-file.min.css
 #### common
 
 `common`目录为业务公共目录，用于存放业务项目的业务公共文件。所以，根据`业务逻辑`划分目录结构时，业务逻辑命名 *不允许(MUST NOT)* 为`common`。
-
-
