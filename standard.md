@@ -70,7 +70,7 @@ my-file.min.css
   ```
   <script src=”jQuery.cookie.js” async></script>
   ```
-  6.	省略link与<script>标签的 type 属性。鉴于 HTML5 中以上两者默认的 type 值就是 text/css 和 text/javascript，所以 type 属性一般是可以忽略掉的，在老旧版本的浏览器中这么做也是安全可靠的
+  6.	省略link与script标签的 type 属性。鉴于 HTML5 中以上两者默认的 type 值就是 text/css 和 text/javascript，所以 type 属性一般是可以忽略掉的，在老旧版本的浏览器中这么做也是安全可靠的
   ```
   <link rel="stylesheet" href="main.css">
   <script src="main.js"></script>
