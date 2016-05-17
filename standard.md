@@ -4,32 +4,114 @@
 此为前端开发团队遵循和约定的代码书写规范，意在提高代码的规范性和可维护性。  
 此规范为参考规范，不全是硬性要求，统一团队编码规范和风格。让所有代码都是有规可循的，并且能够得到沉淀，减少重复劳动。  
 
+## 规范目的  
+
+1.	提高团队协作效率
+2.	便于前端开发以及后期优化维护
+3.	方便新进的成员快速上手
+4.	输出高质量的代码
+5.	使开发流程更加规范化
+注：前端开发人员必须按本文档规范进行前端开发。本文档如有不对或者不合适的地方请及时提出，经讨论决定后可以更新此文档
+
+### 通用规范
+
+1.	缩进使用两个空格
+2.	文件内容编码统一为UTF-8
+3.	css样式属性或js代码后加分号（；）方便压缩工具断句
+4.	对文件进行版本管理
+
+### 文件命名规范
+1.	命名组合：字母+数字+减号（-）
+减号是常见的 URL 分隔符，所以用来分隔资源名称的最好选择
+2.	命名开头不能是数字
+3.	命名根据实际开发的功能模块进行命名，命名语义化
+
+* 不推荐写法：
+```
+MyScript.js
+myCamelCaseName.css
+i_love_underscores.html
+1001-scripts.js
+my-file-min.css
+```
+* 推荐写法：
+```
+my-script.js
+my-camel-case-name.css
+i-love-underscores.html
+thousand-and-one-scripts.js
+my-file.min.css
+```
+
+
 ###HTML规范
-   * 使用UTF-8 编码
-   
-```
- <meta charset="UTF-8">
- 
-```
-   * 省略外链资源 URL 协议部分
-	
-```
-	//推荐写法：
-	<script src="//www.google.com/js/gweb/analytics/autotrack.js"></script>
-	或
-	.example {
-        background: url(//www.google.com/images/example);
-    }
-	
-```
-   * 一律使用小写字母
+  
+  1.	编码遵循W3C标准,文档类型声明统一为HTML5声明类型，编码统一为UTF-8
+  ```
+  <!DOCTYPE html>
+  <meta charset="UTF-8">
+  ```
+  2.	<head>中添加信息
+  ```
+  <meta name="author" content="noahbang.com">  //作者
+  <meta name="description" content="hello">  //网页描述
+  <meta name="keywords" content="a,b,c">  //关键字,“，”分隔
+  <link rel="Shortcut Icon" href="favicon.ico">  //收藏图标
+  ```
+  3.	css样式文件外链至head之间，js文件外链至页面底部，加载js文件需加上async，异步加载
+  ```
+  <script src=”” async></script>
+  ```
+  4.	引入js库文件，文件名须包含库名称及版本号及是否为压缩版
+  ```
+  <script src=”jQuery-1.8.3.min.js” async></script>
+  ```
+  5.	引入js插件, 文件名格式为库名称+ . +插件名称
+  ```
+  <script src=”jQuery.cookie.js” async></script>
+  ```
+  6.	省略<link />与<script>标签的 type 属性。鉴于 HTML5 中以上两者默认的 type 值就是 text/css 和 text/javascript，所以 type 属性一般是可以忽略掉的，在老旧版本的浏览器中这么做也是安全可靠的
+  ```
+  <link rel="stylesheet" href="main.css">
+  <script src="main.js"></script>
+  ```
+  7.	HTML语义化：标题根据重要性用h1~h6(同一页面只能有一个h1), 段落标记用p, 列表用ul, 内联元素中不可嵌套块级元素
+  8.	单标签元素必须闭合
+  ```
+  <link />, <img />, <br />…
+  ```
+  9.	特殊符号应使用转意符
+  ```
+  空格 ：&nbsp;  < : &lt;  > : &gt; …
+  ```
+  10.	含有描述性表单元素（input，textarea）添加label标签
+  ```
+  <p>
+      <label for="test">测试</label>
+      <input type="text" id="test" />
+  </p>
+  ```
+  11.	多用无兼容性问题的HTML内置标签
+  ```
+  span, em, strong, label…
+  ```
+  12.	自定义HTML标签属性时,须以“data-”为前缀来添加自定义属性，避免使用其他命名方式
+  13.	HTML中对于属性的定义，确保全部使用双引号，绝不要使用单引号
+  14.	减少<DIV>嵌套
+  15.	书写链接地址时, 必须避免重定向
+  ```
+  如 ：href="http://itaolun.com/", 即须在URL地址后面加上“/”
+  ```
+  16.	在HTML标签上尽量避免使用style属性
+  17.	a标签href为空时，用javascript:void(null)替换#
+  18.	重要图片必须加上alt属性; 给重要的元素和截断的元素加上title
+  19.	必须为大区块添加注释, 小区块适量注释
+  22.   一律使用小写字母
 
 ```
 <img src="google.png" alt="Google">
 
 ```   
-
-   * HTML换行缩进：**采用 2 空格**
 
 ###CSS规范
 
