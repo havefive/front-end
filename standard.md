@@ -146,8 +146,10 @@ my-file.min.css
 ```
 
 4.	class(类)名总是使用可以反应元素目的和用途的名称，或其他通用名称
+```
 .heavy { font-weight: 800; }
 .important { color: red; }
+```
 5.	CSS选择器中避免标签名
 6.	使用连字符（中划线）分隔ID和Class（类）名中的单词
 7.	省略“0”值后面的单位
@@ -233,6 +235,65 @@ position, float…
 
 
 ###JS规范
+
+1.	命名规范
+常量名 ：全部大写并单词间用下划线分隔
+如 ：CSS_BTN_CLOSE、TXT_LOADING
+对象的属性或方法名 ：驼峰命名
+如 ：init、bindEvent、updatePosition
+类名（构造器） ：驼峰命名，但首字母大写
+如：Current、DefaultConfig
+函数名 ：驼峰命名
+如：current()、defaultConfig()
+变量名 ：驼峰命名
+如：current、defaultConfig
+私有变量名 ：驼峰命名，但需要用下划线 _ 开头
+如 ：_current、_defaultConfig
+2.	声明变量，注明变量类型
+变量为对象类型，var oBox
+变量为数字类型，var iNum
+变量为字符串类型，var sTitle
+变量为数组类型，var aLi
+变量为布尔类型，var bOff
+3.	代码格式
+"()"前后需要跟空格
+"="前后需要跟空格
+","后面需要跟空格
+if、while、for、do语句的执行体用"{}"括起来
+4.	避免额外的逗号
+var arr = [1,2,3,];
+5.	Number, String, Boolean, Object, Array类型的对象不建议用new构造
+6.	尽量避免使用存在兼容性及消耗资源的方法或属性
+with，void，evil，eval，innerText
+7.	注重HTML分离, 合理对DOM进行操作， 减小reflow（重绘）, 注重性能
+8.	使用严格的条件判断符。用===代替==，用!==代替!=，避免掉入==造成的陷阱
+9.	number转string
+number + ‘’;
+10.	string 转number
+使用parseInt，必须显式指定第二个参数的进制
+11.	字符串拼接应使用数组保存字符串片段，使用时调用join方法。避免使用+或+=的方式拼接较长的字符串，每个字符串都会使用一个小的内存片段，过多的内存片段会影响性能
+12.	少使用全局变量，避免全局变量命名污染
+13.	立即执行函数写法
+```
+（function（）{}（））
+```
+14.	使用严格模式
+```
+’use strict’;
+```
+15.	不要使用switch，用if else代替
+16.	字符串统一使用单引号
+17.	建议多使用三元条件判断
+18.	性能优化：
+事件委托
+文档碎片
+…
+19.	遵循Yahoo性能优化黄金守则
+20.	开发时请用gulp工具对js进行语法检测，压缩代码
+
+
+
+
 ######1. 使用 JSHint 和 JSCS 控制代码质量
 ######2. [Nodejs单元测试Mocha](https://segmentfault.com/a/1190000002921481)
 
