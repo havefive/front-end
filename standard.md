@@ -126,7 +126,7 @@ my-file.min.css
  * 对与同级元素相比没有特殊的意义的元素使用通用的命名；
 使用功能性或通用的名字可以减少不必要的文件修改。
  * 使用连字符 - 作为 ID、Class 名称界定符
-* CSS嵌套规则  
+ * CSS嵌套规则  
 
 ```
     /* 推荐嵌套层级 */
@@ -144,6 +144,93 @@ my-file.min.css
     .ui-nav{}
 
 ```
+
+4.	class(类)名总是使用可以反应元素目的和用途的名称，或其他通用名称
+.heavy { font-weight: 800; }
+.important { color: red; }
+5.	CSS选择器中避免标签名
+6.	使用连字符（中划线）分隔ID和Class（类）名中的单词
+7.	省略“0”值后面的单位
+8.	属性选择器或属性值用双引号（””），url值不要使用引号
+9.	为了W3C的验证工具,可将代码分为两个文件，一个是针对所有浏览器,一个只针对IE。将所有符合W3C的代码写到一个文件中,而一些IE中必须而又不能通过W3C验证的代码放到另一个文件中，再用下面的方法导入
+```
+<!-- 放置所有浏览器样式-->
+<link rel="stylesheet" type="text/css" href="">
+<!-- 只放置IE必须，而不能通过w3c的-->
+<!--[if IE]
+    <link rel="stylesheet" href="">
+<![endif]-->
+```
+10.	CSS属性显示顺序
+显示属性
+元素位置
+元素属性
+元素内容属性
+11.	CSS书写顺序（有利于浏览器渲染速度）
+```
+.header {
+/* 显示属性 */ display || visibility, list-style, position top || right || bottom || left, z-index, clear, float
+/* 自身属性 */ width max-width || min-width, height max-height || min-height，overflow || clip，margin, padding, outline, border, background
+/* 文本属性 */ color, font, text-overflow, text-align, text-indent, line-height, white-space, vertical-align, cursor，content
+};
+```
+12.	兼容多个浏览器时，将标准属性写在底部
+```
+-moz-border-radius: 15px; /* Firefox */
+-webkit-border-radius: 15px; /* Safari和Chrome */
+border-radius: 15px; 
+```
+13.	多选择器规则之间换行，即当样式针对多个选择器时每个选择器占一行
+```
+button.btn,
+input.btn,
+input[type="button"] {…};
+```
+14.	避免使用通配规则和相邻兄弟选择符、子选择符,、后代选择符、属性选择符等选择器
+15.	使用z-index属性尽量z-index的值不要超过150（通用组的除外），页面中的元素内容的z-index不能超过10（提示框等模块除外但维持在150以下），不允许直接使用（999~9999）之间大值
+16.	尽量避免使用CSS Hack
+```
+property:value; /* 所有浏览器 */
++property:value; /* IE7 */
+_property:value; /* IE6 */
+*property:value; /* IE6/7 */
+property:value\9; /* IE6/7/8/9，即所有IE浏览器 */
+* html selector { … }; /* IE6 */
+*:first-child+html selector { … }; /* IE7 */
+html>body selector { … }; /* 非IE6 */
+@-moz-document url-prefix() { … }; /* firefox */
+@media all and (-webkit-min-device-pixel-ratio:0) { … }; /* saf3+/chrome1+ */
+@media all and (-webkit-min-device-pixel-ratio:10000),not all and (-webkit-min-device-pixel-ratio:0) { … }; /* opera */
+@media screen and (max-device-width: 480px) { … }; /* iPhone/mobile webkit */
+```
+17.	避免使用低效的选择器
+```
+body > * {…};
+ul > li > a {…};
+#footer > h3 {…};
+ul#top_blue_nav {…};
+# searbar span.submit a { … };
+```
+18.	css注意事项
+不要在标签上直接写样式
+不要在CSS中使用expression
+不要在CSS中使用@import
+不要在CSS中使用!important
+不要在CSS中使用“*”选择符
+不要将CSS样式写为单行
+避免使用filter
+避免使用行内（inline）样式
+避免使用“*”设置{margin: 0; padding: 0;}
+使用after或overflow的方式清浮动
+合理的避免使用ID
+19.	减少在CSS中使用滤镜表达式和图片repeat，尤其在body当中,渲染性能极差, 如果需要用repeat的话，图片的宽或高不能少于8px
+20.	样式表中中文字体名, 请务必转码成unicode码, 以避免编码错误时乱码
+21.	减少使用影响性能的属性
+position, float…
+22.	书写代码前, 考虑并提高样式重复使用率
+23.	开发时请用gulp工具对css进行语法检测，压缩代码
+
+
 
 ###JS规范
 ######1. 使用 JSHint 和 JSCS 控制代码质量
